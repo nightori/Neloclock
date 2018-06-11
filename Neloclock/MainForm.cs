@@ -83,6 +83,15 @@ namespace Neloclock
             pDigit3.Image = pictures[settings.d3Skin][d3];
             pDigit4.Image = pictures[settings.d4Skin][d4];
             pDelimiter.Image = pictures[settings.delSkin][10];
+            try
+            {
+                settings.location = MainForm.ActiveForm.Location;
+            }
+            catch(Exception){}
+            finally
+            {
+                settings.saveSettings();
+            }
         }
 
         private void skin_Click(object sender, EventArgs e)
@@ -117,14 +126,9 @@ namespace Neloclock
             MainForm.ActiveForm.TopMost = settings.stayOnTop;
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void exit_Click(object sender, EventArgs e)
         {
             MainForm.ActiveForm.Close();
-        }
-
-        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            settings.saveSettings();
         }
     }
 }

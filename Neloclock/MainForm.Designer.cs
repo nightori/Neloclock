@@ -245,7 +245,7 @@
             this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
             this.exitToolStripMenuItem1.Size = new System.Drawing.Size(134, 22);
             this.exitToolStripMenuItem1.Text = "Exit";
-            this.exitToolStripMenuItem1.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.exitToolStripMenuItem1.Click += new System.EventHandler(this.exit_Click);
             // 
             // pDigit2
             // 
@@ -375,7 +375,7 @@
             this.exitToolStripMenuItem2.Name = "exitToolStripMenuItem2";
             this.exitToolStripMenuItem2.Size = new System.Drawing.Size(134, 22);
             this.exitToolStripMenuItem2.Text = "Exit";
-            this.exitToolStripMenuItem2.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.exitToolStripMenuItem2.Click += new System.EventHandler(this.exit_Click);
             // 
             // pDelimiter
             // 
@@ -505,7 +505,7 @@
             this.exitToolStripMenuItemDel.Name = "exitToolStripMenuItemDel";
             this.exitToolStripMenuItemDel.Size = new System.Drawing.Size(134, 22);
             this.exitToolStripMenuItemDel.Text = "Exit";
-            this.exitToolStripMenuItemDel.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.exitToolStripMenuItemDel.Click += new System.EventHandler(this.exit_Click);
             // 
             // pDigit3
             // 
@@ -635,7 +635,7 @@
             this.exitToolStripMenuItem3.Name = "exitToolStripMenuItem3";
             this.exitToolStripMenuItem3.Size = new System.Drawing.Size(134, 22);
             this.exitToolStripMenuItem3.Text = "Exit";
-            this.exitToolStripMenuItem3.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.exitToolStripMenuItem3.Click += new System.EventHandler(this.exit_Click);
             // 
             // pDigit4
             // 
@@ -765,12 +765,12 @@
             this.exitToolStripMenuItem4.Name = "exitToolStripMenuItem4";
             this.exitToolStripMenuItem4.Size = new System.Drawing.Size(134, 22);
             this.exitToolStripMenuItem4.Text = "Exit";
-            this.exitToolStripMenuItem4.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.exitToolStripMenuItem4.Click += new System.EventHandler(this.exit_Click);
             // 
             // timerUpdater
             // 
             this.timerUpdater.Enabled = true;
-            this.timerUpdater.Interval = 150;
+            this.timerUpdater.Interval = 250;
             this.timerUpdater.Tick += new System.EventHandler(this.timerUpdater_Tick);
             // 
             // MainForm
@@ -791,7 +791,6 @@
             this.ShowInTaskbar = false;
             this.Text = "Neloclock";
             this.TransparencyKey = System.Drawing.Color.Lime;
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.Shown += new System.EventHandler(this.MainForm_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pDigit1)).EndInit();
             this.contextMenuD1.ResumeLayout(false);

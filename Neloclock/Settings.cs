@@ -36,7 +36,6 @@ namespace Neloclock
 
         public void saveSettings()
         {
-            location = MainForm.ActiveForm.Location;
             iniData["skin"]["d1Skin"] = Convert.ToString(d1Skin);
             iniData["skin"]["d2Skin"] = Convert.ToString(d2Skin);
             iniData["skin"]["d3Skin"] = Convert.ToString(d3Skin);

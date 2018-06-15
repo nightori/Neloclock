@@ -30,29 +30,8 @@ namespace Neloclock
         public MainForm()
         {
             InitializeComponent();
-        }
-
-        private void MainForm_Shown(object sender, EventArgs e)
-        {
             settings = new Settings();
             pictures = loadImages();
-            MainForm.ActiveForm.Location = settings.location;
-            MainForm.ActiveForm.TopMost = settings.stayOnTop;
-            stayOnTopToolStripMenuItem1.Checked = settings.stayOnTop;
-            stayOnTopToolStripMenuItem2.Checked = settings.stayOnTop;
-            stayOnTopToolStripMenuItem3.Checked = settings.stayOnTop;
-            stayOnTopToolStripMenuItem4.Checked = settings.stayOnTop;
-            stayOnTopToolStripMenuItemDel.Checked = settings.stayOnTop;
-            var skins1 = skinToolStripMenuItem1.DropDownItems;
-            var skins2 = skinToolStripMenuItem2.DropDownItems;
-            var skins3 = skinToolStripMenuItem3.DropDownItems;
-            var skins4 = skinToolStripMenuItem4.DropDownItems;
-            var skinsDel = skinToolStripMenuItemDel.DropDownItems;
-            ((ToolStripMenuItem)skins1[settings.d1Skin]).Checked = true;
-            ((ToolStripMenuItem)skins2[settings.d2Skin]).Checked = true;
-            ((ToolStripMenuItem)skins3[settings.d3Skin]).Checked = true;
-            ((ToolStripMenuItem)skins4[settings.d4Skin]).Checked = true;
-            ((ToolStripMenuItem)skinsDel[settings.delSkin]).Checked = true;
         }
 
         private void moveWindow(object sender, MouseEventArgs e)
@@ -81,6 +60,27 @@ namespace Neloclock
             return list;
         }
 
+        private void MainForm_Shown(object sender, EventArgs e)
+        {
+            this.Location = settings.location;
+            this.TopMost = settings.stayOnTop;
+            stayOnTopToolStripMenuItem1.Checked = settings.stayOnTop;
+            stayOnTopToolStripMenuItem2.Checked = settings.stayOnTop;
+            stayOnTopToolStripMenuItem3.Checked = settings.stayOnTop;
+            stayOnTopToolStripMenuItem4.Checked = settings.stayOnTop;
+            stayOnTopToolStripMenuItemDel.Checked = settings.stayOnTop;
+            var skins1 = skinToolStripMenuItem1.DropDownItems;
+            var skins2 = skinToolStripMenuItem2.DropDownItems;
+            var skins3 = skinToolStripMenuItem3.DropDownItems;
+            var skins4 = skinToolStripMenuItem4.DropDownItems;
+            var skinsDel = skinToolStripMenuItemDel.DropDownItems;
+            ((ToolStripMenuItem)skins1[settings.d1Skin]).Checked = true;
+            ((ToolStripMenuItem)skins2[settings.d2Skin]).Checked = true;
+            ((ToolStripMenuItem)skins3[settings.d3Skin]).Checked = true;
+            ((ToolStripMenuItem)skins4[settings.d4Skin]).Checked = true;
+            ((ToolStripMenuItem)skinsDel[settings.delSkin]).Checked = true;
+        }
+
         private void timerUpdater_Tick(object sender, EventArgs e)
         {
             String time = DateTime.Now.ToString("HHmm");
@@ -95,7 +95,7 @@ namespace Neloclock
             pDelimiter.Image = pictures[settings.delSkin][10];
             try
             {
-                settings.location = MainForm.ActiveForm.Location;
+                settings.location = this.Location;
             }
             catch(Exception){}
             finally
@@ -133,12 +133,12 @@ namespace Neloclock
             stayOnTopToolStripMenuItem3.Checked = settings.stayOnTop;
             stayOnTopToolStripMenuItem4.Checked = settings.stayOnTop;
             stayOnTopToolStripMenuItemDel.Checked = settings.stayOnTop;
-            MainForm.ActiveForm.TopMost = settings.stayOnTop;
+            this.TopMost = settings.stayOnTop;
         }
 
         private void exit_Click(object sender, EventArgs e)
         {
-            MainForm.ActiveForm.Close();
+            this.Close();
         }
     }
 }

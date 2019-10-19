@@ -13,4 +13,4 @@ Inspired by Gelbooru. Those cute pictures are also kindly borrowed from there.
 
 Settings are stored in settings.ini file, which can be manually changed if you want.
 
-![Neloclock Screenshot](http://i.yapx.ru/Bgdjc.jpg)
+![Neloclock Screenshot](https://user-images.githubusercontent.com/36256313/67137812-dbcbf280-f25c-11e9-900b-beb00f30c90c.png)
